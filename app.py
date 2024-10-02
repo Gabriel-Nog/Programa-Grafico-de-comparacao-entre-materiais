@@ -263,10 +263,14 @@ def form():
 
 @app.route('/generate-graph', methods=['POST'])
 def generate_graph():
-    
-    elemento1 = request.form['elemento1']
-    elemento2 = request.form['elemento2']
-    materials_list = [elemento1, elemento2]
+    #Lista de materiais
+    materials_list = []
+    i = 1
+
+    # Loop para pegar todos os elementos até que não haja mais entradas
+    while f'elemento{i}' in request.form:
+        materials_list.append(request.form[f'elemento{i}'])    
+        i += 1
     
     selected_options = request.form.getlist('options')
     df = read_and_process_csv('BaseDeDados.csv')
@@ -291,7 +295,7 @@ def generate_graph():
         if 'densidade' in selected_options:
             plot_densidade(df, materials_list)
     
-    return render_template('view.html', selected_options=options)
+    return render_template('view.html', selected_options=options, materials_list=materials_list)
 
 if __name__ == '__main__':
     app.run(debug=True)

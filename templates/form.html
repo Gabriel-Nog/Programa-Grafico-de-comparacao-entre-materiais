@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="col-md-3 center">
+        <div class="col-md-4 justify-content-center">
             <h3>Gráfico de Materiais</h3>
             <p>Escolha o tipo de gráfico para visualizar:</p>
         </div>
@@ -43,6 +43,14 @@
                                 aria-label="Sizing example input" 
                                 aria-describedby="elemento" value="" placeholder="Digite o Elemento 2">
                             </div>
+                        </div>
+                        <div class="col-md-1 d-flex align-items-center justify-content-center mb-3">
+                            <button class="btn btn-primary" type="button" onclick="addElement(data)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                                </svg>
+                            </button>
+                        </div>
                         </div>
                     </div>
                     </div>
@@ -99,6 +107,7 @@
     <script defer>
         let valorElemento1 = document.getElementById("elemento1").value;
         let valorElemento2 = document.getElementById("elemento2").value;
+        const somatorio = 2;
         const data = ["Liga de aço A36",
 "Liga de aço 1020",
 "Liga de aço 1040",
@@ -272,6 +281,39 @@ function autocomplete(inp, arr) {
     });
 }
 
+function addElement(data) {
+    const container = document.createElement("div");
+    container.className = "row mt-3 align-items-center justify-content-center";
+
+    const col = document.createElement("div");
+    col.className = "col-md-5";
+
+    const inputGroup = document.createElement("div");
+    inputGroup.className = "input-group mb-3";
+
+    const span = document.createElement("span");
+    span.className = "input-group-text";
+    span.id = "elemento";
+    span.textContent = `Elemento ${document.querySelectorAll('.input-group').length + 1}`;
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "form-control";
+    input.id = `elemento${document.querySelectorAll('.input-group').length + 1}`;
+    input.name = `elemento${document.querySelectorAll('.input-group').length + 1}`;
+    input.placeholder = `Digite o Elemento ${document.querySelectorAll('.input-group').length + 1}`;
+
+    inputGroup.appendChild(span);
+    inputGroup.appendChild(input);
+    col.appendChild(inputGroup);
+    container.appendChild(col);
+
+    // Adiciona o container ao formulário
+    document.querySelector("form").appendChild(container);
+    autocomplete(input, data);
+}
+
+// addElement(data);
 autocomplete(document.getElementById("elemento1"), data);
 autocomplete(document.getElementById("elemento2"), data);
 </script>   
