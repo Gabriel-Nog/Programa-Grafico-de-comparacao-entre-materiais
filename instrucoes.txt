@@ -1,0 +1,35 @@
+**Caso possua o python em seu computador, desconsidere o passo 1**
+Passo 1: Instalar o Python
+Baixar o Python:
+
+Acesse o site oficial do Python: https://www.python.org/downloads/
+Clique no botão "Download Python" para baixar o instalador.
+Instalar o Python:
+
+Execute o instalador baixado.
+Na primeira tela do instalador, marque a opção "Add Python to PATH".
+Clique em "Install Now" e siga as instruções para concluir a instalação.
+
+Após baixar o python execute no prompt de comando: python --version
+A saída deve sair algo parecido com isso: Python 3.9.1
+
+Passo 2: Abra o cmd do windows
+Aperte a tecla windows e procure por prompt de comando
+Abra o prompt de comando
+e em outra aba 
+Vá até o gerenciador de arquivos, procure a pasta em que os arquivos do programa estão
+(Normalmente a pasta tem o mesmo nome do arquivo .zip)
+Copie todo o caminho dessa dita pasta
+Retorne ao prompt de comando
+e faça o seguinte:
+escreva "cd" e cole o caminho do arquivo com Ctrl+Shift+V
+Irá ficar algo parecido com isso: cd <CAMINHO_PARA_O_DIRETORIO_DO_PROJETO>
+
+Passo 3: Rodar o programa em si
+Após entrar no projeto com o cd, execute esse comando: pip install -r requirements.txt
+**Caso o computador não reconheça o pip, basta apenas reiniciar e retornar a partir do passo 2**
+Caso de sucesso, execute, ainda na mesma pasta do cd, execute: python app.py
+
+Passo 4: Abra o navegador(Browser de sua diferença)
+E cole: http://127.0.0.1:5000
+**Na barra de cima, não na barra de pesquisa que está próximan ao centro da tela**

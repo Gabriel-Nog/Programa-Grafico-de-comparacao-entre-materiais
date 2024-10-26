@@ -1,324 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gráfico de Materiais</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <style>
-        #arrow {
-            transform: rotate(90deg);
-        }
+      #arrow {
+        transform: rotate(90deg);
+      }
     </style>
-    <link rel="icon" href="/templates/Icon/pngaaa.com-283122.png" type="image/x-icon">
-</head>
-<body>
+    <link
+      rel="icon"
+      href="/templates/Icon/pngaaa.com-283122.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <div class="container mt-5">
-        <div class="col-md-4 justify-content-center">
-            <h3>Gráfico de Materiais</h3>
-            <p>Escolha o tipo de gráfico para visualizar:</p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <form action="/generate-graph" method="post">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="elemento">Elemento 1</span>
-                                <input type="text" class="form-control" 
-                                id="elemento1" name="elemento1"
-                                aria-label="Sizing example input" 
-                                aria-describedby="elemento" value="" placeholder="Digite o Elemento 1">
-                            </div>
-                        </div>
-                        <div class="col-md-1 d-flex align-items-center justify-content-center mb-3" id="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
-                            </svg>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="elemento">Elemento 2</span>
-                                <input type="text" class="form-control" 
-                                id="elemento2" name="elemento2"
-                                aria-label="Sizing example input" 
-                                aria-describedby="elemento" value="" placeholder="Digite o Elemento 2">
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                            <button class="btn btn-primary" type="button" onclick="addElement(data)">
-                                <div class="d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg me-2" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                                    </svg>
-                                    <p id="addElement" class="mb-0 text-nowrap">Adicionar Elemento</p>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="massa" name="options" value="massa">
-                                <label class="form-check-label" for="massa">Massa Específica</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="modulo" name="options" value="modulo">
-                                <label class="form-check-label" for="modulo">Módulo de Elasticidade</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="coeficiente" name="options" value="coeficiente">
-                                <label class="form-check-label" for="coeficiente">Coeficiente de Poisson</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="expansao" name="options" value="expansao">
-                                <label class="form-check-label" for="expansao">Coeficiente de expansão térmica</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="calor" name="options" value="calor">
-                                <label class="form-check-label" for="calor">Calor específico</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="densidade" name="options" value="densidade">
-                                <label class="form-check-label" for="densidade">Densidade</label>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row justify-content-center mt-5">
-                        <div class="col-md-3 text-center">
-                            <button type="submit" class="btn btn-primary" id="submitButton">Gerar Gráfico</button>
-                        </div>
-                    </div>
-                </form>
+      <div class="col-md-4 justify-content-center">
+        <h3>Gráfico de Materiais</h3>
+        <p>Escolha o tipo de gráfico para visualizar:</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <form action="/generate-graph" method="post">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="elemento">Elemento 1</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="elemento1"
+                    name="elemento1"
+                    aria-label="Sizing example input"
+                    aria-describedby="elemento"
+                    value=""
+                    placeholder="Digite o Elemento 1"
+                  />
+                </div>
+              </div>
+              <div
+                class="col-md-1 d-flex align-items-center justify-content-center mb-3"
+                id="arrow"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-down-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5"
+                  />
+                </svg>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="elemento">Elemento 2</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="elemento2"
+                    name="elemento2"
+                    aria-label="Sizing example input"
+                    aria-describedby="elemento"
+                    value=""
+                    placeholder="Digite o Elemento 2"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-1">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  onclick="addElement(data)"
+                >
+                  <div class="d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-plus-lg me-2"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                      />
+                    </svg>
+                    <p id="addElement" class="mb-0 text-nowrap">
+                      Adicionar Elemento
+                    </p>
+                  </div>
+                </button>
+              </div>
             </div>
+            <div class="row-md-6">
+              <div class="col-md-12 text-center m-3">
+                <div class="row justify-content-center">
+                  <div class="col-md-5">
+                    <label for="axisX" class="form-label">Eixo X</label>
+                    <select
+                      class="form-select"
+                      id="axisX"
+                      name="axisX"
+                    ></select>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="axisY" class="form-label">Eixo Y</label>
+                    <select
+                      class="form-select"
+                      id="axisY"
+                      name="axisY"
+                    ></select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 text-center">
+                <button
+                  type="submit"
+                  class="btn btn-primary mt-5"
+                  id="submitButton"
+                >
+                  Gerar Gráfico
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
     <script defer>
-        let valorElemento1 = document.getElementById("elemento1").value;
-        let valorElemento2 = document.getElementById("elemento2").value;
-        const somatorio = 2;
-        const data = ["Liga de aço A36",
-"Liga de aço 1020",
-"Liga de aço 1040",
-"Liga de aço 4140",
-"Liga de aço 4340",
-"Liga inoxidável 304",
-"Liga inoxidável 316",
-"Liga inoxidável 405",
-"Liga inoxidável 440A",
-"Liga inoxidável 17-7PH",
-"Ferros cinzentos Classe G1800",
-"Ferros cinzentos Classe G3000",
-"Ferros cinzentos Classe G4000",
-"Ferros nodulares Classe 60-40-18",
-"Ferros nodulares Classe 80-55-06",
-"Ferros nodulares Classe 120-90-02",
-"Liga 1100",
-"Liga 2024",
-"Liga 6061",
-"Liga 7075",
-"Liga 356,0",
-"C11000 (cobre eletrolítico tenaz)",
-"C17200 (berílio-cobre)",
-"C26000 (latão para cartuchos)",
-"C36000 (latão de fácil usinagem)",
-"C71500 (cobre-níquel, 30%)",
-"C93200 (bronze para mancais)",
-"Liga AZ31B",
-"Liga AZ91D",
-"Comercialmente puro (ASTM classe 1)",
-"Liga Ti–5Al–2,5Sn",
-"Liga Ti–6Al–4V",
-"Ouro (comercialmente puro)",
-"Platina (comercialmente pura)",
-"Prata (comercialmente pura)",
-"Molibdênio (comercialmente puro)",
-"Tântalo (comercialmente puro)",
-"Tungstênio (comercialmente puro)",
-"Níquel 200",
-"Inconel 625",
-"Monel 400",
-"Liga Haynes 25",
-"Invar",
-"Superinvar",
-"Kovar",
-"Chumbo químico",
-"Chumbo antimonial (6%)",
-"Estanho (comercialmente puro)",
-"Solda chumbo-estanho (60 Sn-40 Pb)",
-"Zinco (comercialmente puro)",
-"Zircônio, classe 702 para reatores",
-"Óxido de alumínio 99,9% puro",
-"Óxido de alumínio 96% puro",
-"Óxido de alumínio 90% puro",
-"Concreto",
-"Diamante Natural",
-"Diamante Sintético",
-"Arseneto de gálio",
-"Vidro, borossilicato (Pyrex)",
-"Vidro, sodo-cálcico",
-"Vitrocerâmico (Pyroceram)",
-"Grafita Extrudada",
-"Grafita Conformada isostaticamente",
-"Sílica, fundida",
-"Silício",
-"Carbeto de silício Prensa do ar quente",
-"Carbeto de silício Sinterizado",
-"Nitreto de silício Prensa do ar quente",
-"Nitreto de silício Unido por reação",
-"Nitreto de silício Sinterizado",
-"Zircônia, 3 mol% Y 2O3 , sinterizada",
-"Elastômeros Butadieno-acrilonitrila (nitrila)",
-"Elastômeros Estireno-butadieno (SBR)",
-"Elastômeros Silicone",
-"Epóxi",
-"Náilon",
-"Fenólico",
-"Poli(tereftalato de butileno) (PBT)",
-"Policarbonato (PC)",
-"Poliéster (termorrígido) 1,04–1,46",
-"Poli(éter-éter-cetona) (PEEK)",
-"Polietileno Baixa densidade (LDPE)",
-"Polietileno Alta densidade (HDPE)",
-"Polietileno Ultra-alto peso molecular (UHMWPE)",
-"Poli(tereftalato de etileno) (PET)",
-"Poli(metacrilato de metila) (PMMA)",
-"Polipropileno (PP)",
-"Poliestireno (PS)",
-"Politetrafluoretileno (PTFE)",
-"Poli(cloreto de vinila) (PVC) 1,",
-"Aramida (Kevlar 49)",
-"Carbono Módulo-padrão (precursor PAN)",
-"Carbono Módulo intermediário (precursor PAN)",
-"Carbono Módulo alto (precursor PAN)",
-"Carbono Módulo ultra-alto (precursor piche)",
-"Vidro-E",
-"Fibras de aramida-matriz epóxi(Vf 5 0,60)",
-"Fibras de carbono de módulo alto-matriz epóxi (V f 5 0,60)",
-"Fibras de vidro-E-matriz epóxi(V f 5 0,60)",
-"Madeira Pinheiro de Douglas (12% de umidade)",
-"Madeira Carvalho vermelho (12% de umidade)"]
-        
-function autocomplete(inp, arr) {
-    let currentFocus;
-    inp.addEventListener("input", function(e) {
-        let a, b, i, val = this.value;
-        closeAllLists();
-        if (!val) { return false;}
-        currentFocus = -1;
-        a = document.createElement("DIV");
-        a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
-        this.parentNode.appendChild(a);
-        for (i = 0; i < arr.length; i++) {
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                b = document.createElement("DIV");
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += arr[i].substr(val.length);
-                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                b.addEventListener("click", function(e) {
-                    inp.value = this.getElementsByTagName("input")[0].value;
-                    closeAllLists();
-                });
-                a.appendChild(b);
-            }
-        }
-    });
+      let valorElemento1 = document.getElementById('elemento1').value;
+      let valorElemento2 = document.getElementById('elemento2').value;
+      let valorAxisX = document.getElementById('axisX');
+      let valorAxisY = document.getElementById('axisY');
+      const data = [
+        'Liga de aço A36',
+        'Liga de aço 1020',
+        'Liga de aço 1040',
+        'Liga de aço 4140',
+        'Liga de aço 4340',
+        'Liga inoxidável 304',
+        'Liga inoxidável 316',
+        'Liga inoxidável 405',
+        'Liga inoxidável 440A',
+        'Liga inoxidável 17-7PH',
+        'Ferros cinzentos Classe G1800',
+        'Ferros cinzentos Classe G3000',
+        'Ferros cinzentos Classe G4000',
+        'Ferros nodulares Classe 60-40-18',
+        'Ferros nodulares Classe 80-55-06',
+        'Ferros nodulares Classe 120-90-02',
+        'Liga 1100',
+        'Liga 2024',
+        'Liga 6061',
+        'Liga 7075',
+        'Liga 356,0',
+        'C11000 (cobre eletrolítico tenaz)',
+        'C17200 (berílio-cobre)',
+        'C26000 (latão para cartuchos)',
+        'C36000 (latão de fácil usinagem)',
+        'C71500 (cobre-níquel, 30%)',
+        'C93200 (bronze para mancais)',
+        'Liga AZ31B',
+        'Liga AZ91D',
+        'Comercialmente puro (ASTM classe 1)',
+        'Liga Ti–5Al–2,5Sn',
+        'Liga Ti–6Al–4V',
+        'Ouro (comercialmente puro)',
+        'Platina (comercialmente pura)',
+        'Prata (comercialmente pura)',
+        'Molibdênio (comercialmente puro)',
+        'Tântalo (comercialmente puro)',
+        'Tungstênio (comercialmente puro)',
+        'Níquel 200',
+        'Inconel 625',
+        'Monel 400',
+        'Liga Haynes 25',
+        'Invar',
+        'Superinvar',
+        'Kovar',
+        'Chumbo químico',
+        'Chumbo antimonial (6%)',
+        'Estanho (comercialmente puro)',
+        'Solda chumbo-estanho (60 Sn-40 Pb)',
+        'Zinco (comercialmente puro)',
+        'Zircônio, classe 702 para reatores',
+        'Óxido de alumínio 99,9% puro',
+        'Óxido de alumínio 96% puro',
+        'Óxido de alumínio 90% puro',
+        'Concreto',
+        'Diamante Natural',
+        'Diamante Sintético',
+        'Arseneto de gálio',
+        'Vidro, borossilicato (Pyrex)',
+        'Vidro, sodo-cálcico',
+        'Vitrocerâmico (Pyroceram)',
+        'Grafita Extrudada',
+        'Grafita Conformada isostaticamente',
+        'Sílica, fundida',
+        'Silício',
+        'Carbeto de silício Prensa do ar quente',
+        'Carbeto de silício Sinterizado',
+        'Nitreto de silício Prensa do ar quente',
+        'Nitreto de silício Unido por reação',
+        'Nitreto de silício Sinterizado',
+        'Zircônia, 3 mol% Y 2O3 , sinterizada',
+        'Elastômeros Butadieno-acrilonitrila (nitrila)',
+        'Elastômeros Estireno-butadieno (SBR)',
+        'Elastômeros Silicone',
+        'Epóxi',
+        'Náilon',
+        'Fenólico',
+        'Poli(tereftalato de butileno) (PBT)',
+        'Policarbonato (PC)',
+        'Poliéster (termorrígido) 1,04–1,46',
+        'Poli(éter-éter-cetona) (PEEK)',
+        'Polietileno Baixa densidade (LDPE)',
+        'Polietileno Alta densidade (HDPE)',
+        'Polietileno Ultra-alto peso molecular (UHMWPE)',
+        'Poli(tereftalato de etileno) (PET)',
+        'Poli(metacrilato de metila) (PMMA)',
+        'Polipropileno (PP)',
+        'Poliestireno (PS)',
+        'Politetrafluoretileno (PTFE)',
+        'Poli(cloreto de vinila) (PVC) 1,',
+        'Aramida (Kevlar 49)',
+        'Carbono Módulo-padrão (precursor PAN)',
+        'Carbono Módulo intermediário (precursor PAN)',
+        'Carbono Módulo alto (precursor PAN)',
+        'Carbono Módulo ultra-alto (precursor piche)',
+        'Vidro-E',
+        'Fibras de aramida-matriz epóxi(Vf 5 0,60)',
+        'Fibras de carbono de módulo alto-matriz epóxi (V f 5 0,60)',
+        'Fibras de vidro-E-matriz epóxi(V f 5 0,60)',
+        'Madeira Pinheiro de Douglas (12% de umidade)',
+        'Madeira Carvalho vermelho (12% de umidade)',
+      ];
 
-    inp.addEventListener("keydown", function(e) {
-        let x = document.getElementById(this.id + "autocomplete-list");
-        if (x) x = x.getElementsByTagName("div");
-        if (e.keyCode == 40) {
+      const data_specs = [
+        'Massa Específica',
+        'Módulo de elasticidade(Gpa)',
+        'Coeficiente de Poisson',
+        'Coeficiente de expansão térmica',
+        'Calor específico',
+        'Densidade',
+      ];
+
+      const data_specs_values = [
+        'Massa Específica (g/cm³)',
+        'Módulo de elasticidade(Gpa)',
+        'Coeficiente de Poisson',
+        'Coeficiente de expansão térmica(10^-6 °C^-1)',
+        'Calor específico J/kg.K',
+        'Densidade',
+      ];
+
+      function for_options(inp, data, data_value) {
+        for (let i = 0; i < data.length; i++) {
+          let option = document.createElement('option');
+          option.value = data_value[i];
+          option.textContent = data[i];
+          inp.appendChild(option);
+        }
+      }
+
+      function autocomplete(inp, arr) {
+        let currentFocus;
+        inp.addEventListener('input', function (e) {
+          let a,
+            b,
+            i,
+            val = this.value;
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+          a = document.createElement('DIV');
+          a.setAttribute('id', this.id + 'autocomplete-list');
+          a.setAttribute('class', 'autocomplete-items');
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              b = document.createElement('DIV');
+              b.innerHTML =
+                '<strong>' + arr[i].substr(0, val.length) + '</strong>';
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener('click', function (e) {
+                inp.value = this.getElementsByTagName('input')[0].value;
+                closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+        });
+
+        inp.addEventListener('keydown', function (e) {
+          let x = document.getElementById(this.id + 'autocomplete-list');
+          if (x) x = x.getElementsByTagName('div');
+          if (e.keyCode == 40) {
             currentFocus++;
             addActive(x);
-        } else if (e.keyCode == 38) {
+          } else if (e.keyCode == 38) {
             currentFocus--;
             addActive(x);
-        } else if (e.keyCode == 13) {
+          } else if (e.keyCode == 13) {
             e.preventDefault();
             if (currentFocus > -1) {
-                if (x) x[currentFocus].click();
+              if (x) x[currentFocus].click();
             }
+          }
+        });
+
+        function addActive(x) {
+          if (!x) return false;
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+          x[currentFocus].classList.add('autocomplete-active');
         }
-    });
 
-    function addActive(x) {
-        if (!x) return false;
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        x[currentFocus].classList.add("autocomplete-active");
-    }
-
-    function removeActive(x) {
-        for (let i = 0; i < x.length; i++) {
-            x[i].classList.remove("autocomplete-active");
+        function removeActive(x) {
+          for (let i = 0; i < x.length; i++) {
+            x[i].classList.remove('autocomplete-active');
+          }
         }
-    }
 
-    function closeAllLists(elmnt) {
-        let x = document.getElementsByClassName("autocomplete-items");
-        for (let i = 0; i < x.length; i++) {
+        function closeAllLists(elmnt) {
+          let x = document.getElementsByClassName('autocomplete-items');
+          for (let i = 0; i < x.length; i++) {
             if (elmnt != x[i] && elmnt != inp) {
-                x[i].parentNode.removeChild(x[i]);
+              x[i].parentNode.removeChild(x[i]);
             }
+          }
         }
-    }
 
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
-}
+        document.addEventListener('click', function (e) {
+          closeAllLists(e.target);
+        });
+      }
 
-function addElement(data) {
-    const container = document.createElement("div");
-    container.className = "row mt-3 align-items-center justify-content-center";
+      function addElement(data) {
+        const container = document.createElement('div');
+        container.className =
+          'row mt-3 align-items-center justify-content-center';
+        const col = document.createElement('div');
+        col.className = 'col-md-5';
+        const inputGroup = document.createElement('div');
+        inputGroup.className = 'input-group mb-3';
+        const span = document.createElement('span');
+        span.className = 'input-group-text';
+        span.id = 'elemento';
+        span.textContent = `Elemento ${
+          document.querySelectorAll('.input-group').length + 1
+        }`;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'form-control';
+        input.id = `elemento${
+          document.querySelectorAll('.input-group').length + 1
+        }`;
+        input.name = `elemento${
+          document.querySelectorAll('.input-group').length + 1
+        }`;
+        input.placeholder = `Digite o Elemento ${
+          document.querySelectorAll('.input-group').length + 1
+        }`;
+        inputGroup.appendChild(span);
+        inputGroup.appendChild(input);
+        col.appendChild(inputGroup);
+        container.appendChild(col);
+        // Adiciona o container ao formulário antes do eixo X e eixo Y
+        const axisX = document.getElementById('axisX').parentNode;
+        axisX.parentNode.insertBefore(container, axisX);
+        autocomplete(input, data);
+      }
 
-    const col = document.createElement("div");
-    col.className = "col-md-5";
-
-    const inputGroup = document.createElement("div");
-    inputGroup.className = "input-group mb-3";
-
-    const span = document.createElement("span");
-    span.className = "input-group-text";
-    span.id = "elemento";
-    span.textContent = `Elemento ${document.querySelectorAll('.input-group').length + 1}`;
-
-    const input = document.createElement("input");
-    input.type = "text";
-    input.className = "form-control";
-    input.id = `elemento${document.querySelectorAll('.input-group').length + 1}`;
-    input.name = `elemento${document.querySelectorAll('.input-group').length + 1}`;
-    input.placeholder = `Digite o Elemento ${document.querySelectorAll('.input-group').length + 1}`;
-
-    inputGroup.appendChild(span);
-    inputGroup.appendChild(input);
-    col.appendChild(inputGroup);
-    container.appendChild(col);
-
-    // Adiciona o container ao formulário
-    document.querySelector("form").appendChild(container);
-    autocomplete(input, data);
-}
-
-// addElement(data);
-autocomplete(document.getElementById("elemento1"), data);
-autocomplete(document.getElementById("elemento2"), data);
-</script>   
-</body>
+      // addElement(data);
+      autocomplete(document.getElementById('elemento1'), data);
+      autocomplete(document.getElementById('elemento2'), data);
+      //Inputs de eixos
+      for_options(valorAxisX, data_specs, data_specs_values);
+      for_options(valorAxisY, data_specs, data_specs_values);
+    </script>
+  </body>
 </html>
