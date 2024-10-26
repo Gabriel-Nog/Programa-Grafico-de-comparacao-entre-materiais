@@ -13,7 +13,8 @@ def read_and_process_csv(file_path):
               )  # Adicione esta linha para verificar os nomes das colunas
 
         required_columns = [
-            'Massa Específica (g/cm³)', 'Módulo de elasticidade(Gpa)'
+            'Massa Específica (g/cm³)', 'Módulo de elasticidade(GPa)', 'Coeficiente de Poisson', 'Coeficiente de expansão térmica(10^-6°C^-1)', 'Calor específico (J/kg.K)',
+            'Densidade (kg/m³)', 'Absorção óptica (m⁻¹)', 'Indução magnética (T)', 'Condutividade elétrica (S/m)'
         ]
         for col in required_columns:
             if col not in df.columns:
@@ -22,16 +23,19 @@ def read_and_process_csv(file_path):
         df = df.dropna(subset=required_columns)
         df['Massa Específica (g/cm³)'] = df[
             'Massa Específica (g/cm³)'].str.replace(',', '.').astype(float)
-        df['Módulo de elasticidade(Gpa)'] = df[
-            'Módulo de elasticidade(Gpa)'].astype(float)
+        df['Módulo de elasticidade(GPa)'] = df[
+            'Módulo de elasticidade(GPa)'].astype(float)
         df['Coeficiente de Poisson'] = df[
             'Coeficiente de Poisson'].str.replace(',', '.').astype(float)
-        df['Coeficiente de expansão térmica(10^-6 °C^-1)'] = df[
-            'Coeficiente de expansão térmica(10^-6 °C^-1)'].str.replace(
+        df['Coeficiente de expansão térmica(10^-6°C^-1)'] = df[
+            'Coeficiente de expansão térmica(10^-6°C^-1)'].str.replace(
                 ',', '.').astype(float)
-        df['Calor específico J/kg.K'] = df['Calor específico J/kg.K'].astype(
+        df['Calor específico (J/kg.K)'] = df['Calor específico (J/kg.K)'].astype(
             float)
-        df['Densidade'] = df['Densidade'].astype(float)
+        df['Densidade (kg/m³)'] = df['Densidade (kg/m³)'].astype(float)
+        df['Absorção óptica (m⁻¹)'] = df['Absorção óptica (m⁻¹)'].astype(float)
+        df['Indução magnética (T)'] = df['Indução magnética (T)'].astype(float)
+        df['Condutividade elétrica (S/m)'] = df['Condutividade elétrica (S/m)'].astype(float)
         return df
     except Exception as e:
         print(f"Erro ao ler e processar o arquivo CSV: {e}")

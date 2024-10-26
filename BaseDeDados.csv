@@ -1,102 +1,102 @@
-Material,Massa Específica (g/cm³),Módulo de elasticidade(Gpa),Coeficiente de Poisson,Coeficiente de expansão térmica(10^-6 °C^-1),Calor específico J/kg.K,Densidade
-Liga de aço A36,"7,85",207,"0,30","11,7",486,7.85
-Liga de aço 1020,"7,85",207,"0,30","11,7",486,7.85
-Liga de aço 1040,"7,85",207,"0,30","11,3",486,7.85
-Liga de aço 4140,"7,85",207,"0,30","12,3",500,7.85
-Liga de aço 4340,"7,85",207,"0,30","12,3",502,7.85
-Liga inoxidável 304,"8,00",193,"0,30","17,2",460,8.00
-Liga inoxidável 316,"8,00",193,"0,30",16,460,8.00
-Liga inoxidável 405,"7,80",200,"0,30","10,8",460,7.80
-Liga inoxidável 440A,"7,80",200,"0,30","10,2",544,7.80
-Liga inoxidável 17-7PH,"7,65",204,"0,30",11,544,7.65
-Ferros cinzentos Classe G1800,"7,30",82,"0,26","11,4",544,7.30
-Ferros cinzentos Classe G3000,"7,30",102,"0,26","11,4",544,7.30
-Ferros cinzentos Classe G4000,"7,30",124,"0,26","11,4",544,7.30
-Ferros nodulares Classe 60-40-18,"7,10",169,"0,29","11,2",544,7.10
-Ferros nodulares Classe 80-55-06,"7,10",168,"0,31","10,6",904,7.10
-Ferros nodulares Classe 120-90-02,"7,10",164,"0,28","23,6",875,7.10
-Liga 1100,"2,71",69,"0,33","22,9",896,2.71
-Liga 2024,"2,77",72,"0,33","23,6",960,2.77
-Liga 6061,"2,70",69,"0,33","23,4",963,2.70
-Liga 7075,"2,80",71,"0,33","21,5",385,2.80
-"Liga 356,0","2,69",72,"0,33",17,420,2.69
-C11000 (cobre eletrolítico tenaz),"8,89",115,"0,33","16,7",375,8.89
-C17200 (berílio-cobre),"8,25",128,"0,30","19,9",380,8.25
-C26000 (latão para cartuchos),"8,53",110,"0,35","20,5",380,8.53
-C36000 (latão de fácil usinagem),"8,50",97,"0,34","16,2",376,8.50
-"C71500 (cobre-níquel, 30%)","8,94",150,"0,34",18,1034,8.94
-C93200 (bronze para mancais),"8,93",100,"0,34",26,1050,8.93
-Liga AZ31B,"1,77",45,"0,35",26,538,1.77
-Liga AZ91D,"1,81",45,"0,35","8,6",460,1.81
-Comercialmente puro (ASTM classe 1),"4,51",103,"0,34","9,4",610,4.51
-"Liga Ti–5Al–2,5Sn","4,48",110,"0,34","8,6",128,4.50
-Liga Ti–6Al–4V,"4,43",114,"0,34","14,2",132,4.43
-Ouro (comercialmente puro),"19,32",77,"0,42","9,1",235,19.32
-Platina (comercialmente pura),"21,45",171,"0,39","19,7",276,21.45
-Prata (comercialmente pura),"10,49",74,"0,37","4,9",139,10.49
-Molibdênio (comercialmente puro),"10,22",320,"0,32","6,9",138,10.28
-Tântalo (comercialmente puro),"16,60",185,"0,35","4,4",456,16.65
-Tungstênio (comercialmente puro),"19,30",400,"0,28","13,3",410,19.25
-Níquel 200,"8,89",204,"0,31","12,8",427,8.90
-Inconel 625,"8,44",207,"0,31","13,9",377,8.44
-Monel 400,"8,80",180,"0,32","12,3",500,8.80
-Liga Haynes 25,"9,13",236,,"1,6",500,9.13
-Invar,"8,05",141,,"0,72",460,8.10
-Superinvar,"8,10",144,,"5,1",129,8.12
-Kovar,"8,36",207,,"29,3",135,8.36
-Chumbo químico,"11,34",14,"0,44","27,2",222,11.34
-Chumbo antimonial (6%),"10,88",,,"23,8",150,11.20
-Estanho (comercialmente puro),"7,17",44,"0,33",24,395,7.31
-Solda chumbo-estanho (60 Sn-40 Pb),"8,52",30,,23,285,8.40
-Zinco (comercialmente puro),"7,14",104,"0,25",23,775,7.14
-"Zircônio, classe 702 para reatores","6,51",99,"0,35","5,9",775,6.52
-"Óxido de alumínio 99,9% puro","3,98",380,"0,22","7,4",775,3.97
-Óxido de alumínio 96% puro,"3,72",303,"0,21","7,4",850,3.80
-Óxido de alumínio 90% puro,"3,60",275,"0,22",7,520,3.60
-Concreto,"2,40",25,"0,20",10,350,2.40
-Diamante Natural,"3,51",700,"0,20","0,11",850,3.51
-Diamante Sintético,"3,36",800,"0,20","5,9",840,3.51
-Arseneto de gálio,"5,32",85,"0,30","3,3",975,5.32
-"Vidro, borossilicato (Pyrex)","2,23",70,"0,20",9,830,2.23
-"Vidro, sodo-cálcico","2,50",69,"0,23","6,5",830,2.50
-Vitrocerâmico (Pyroceram),"2,60",120,"0,25",2,740,2.60
-Grafita Extrudada,"1,71",11,,"2,2",700,1.75
-Grafita Conformada isostaticamente,"1,78",11,,"0,4",670,1.85
-"Sílica, fundida","2,20",73,"0,17","2,5",590,2.20
-Silício,"2,33",129,"0,28","4,6",760,2.33
-Carbeto de silício Prensa do ar quente,"3,30",207,"0,17","4,1",870,3.21
-Carbeto de silício Sinterizado,"3,20",207,"0,16","2,7",1100,3.10
-Nitreto de silício Prensa do ar quente,"3,30",304,"0,30","3,1",481,3.20
-Nitreto de silício Unido por reação,"2,70",304,"0,22","3,1",1050,2.70
-Nitreto de silício Sinterizado,"3,30",304,"0,28","9,6",1670,3.20
-"Zircônia, 3 mol% Y 2O3 , sinterizada","6,00",205,"0,31","9,6",1590,06.05
-Elastômeros Butadieno-acrilonitrila (nitrila),"0,98",0,,235,1170,1.00
-Elastômeros Estireno-butadieno (SBR),"0,94",0,,220,1050,1.00
-Elastômeros Silicone,"1,35",2,,270,1050,1.10
-Epóxi,"1,26",1,,81,1300,1.20
-Náilon,"1,14",2,"0,39",144,1300,1.14
-Fenólico,"1,28",1,,122,810,1.35
-Poli(tereftalato de butileno) (PBT),"1,34",2,,108,,1.31
-Policarbonato (PC),"1,20",2,"0,36",122,,1.20
-"Poliéster (termorrígido) 1,04–1,46","0,04",2,,100,,1.40
-Poli(éter-éter-cetona) (PEEK),"1,31",2,,72,,1.32
-Polietileno Baixa densidade (LDPE),"0,93",1,"0,38",180,,0.92
-Polietileno Alta densidade (HDPE),"0,96",0,"0,46",106,,0.95
-Polietileno Ultra-alto peso molecular (UHMWPE),"0,94",1,,234,,0.93
-Poli(tereftalato de etileno) (PET),"1,35",0,"0,33",117,,1.38
-Poli(metacrilato de metila) (PMMA),"1,19",1,0.41,90,,1.18
-Polipropileno (PP),"0,91",2,"0,40",146,,0.90
-Poliestireno (PS),"1,05",2,"0,33",90,,01.05
-Politetrafluoretileno (PTFE),"2,17",1,"0,46",126,,2.20
-"Poli(cloreto de vinila) (PVC) 1,","1,44",2,"0,38",90,,1.40
-Aramida (Kevlar 49),"1,44",131,,60,,1.44
-Carbono Módulo-padrão (precursor PAN),"1,78",230,,10,,1.75
-Carbono Módulo intermediário (precursor PAN),"1,78",285,,1,,1.80
-Carbono Módulo alto (precursor PAN),"1,81",400,,7,,1.90
-Carbono Módulo ultra-alto (precursor piche),"2,16",520,,15,,2.00
-Vidro-E,"2,58",72,"0,22",5,,2.58
-"Fibras de aramida-matriz epóxi(Vf 5 0,60)","1,40",76,"0,34",-4,,1.44
-"Fibras de carbono de módulo alto-matriz epóxi (V f 5 0,60)","1,70",5,"0,25",70,,1.60
-"Fibras de vidro-E-matriz epóxi(V f 5 0,60)","2,10",12,"0,19","-0,5",,2.00
-Madeira Pinheiro de Douglas (12% de umidade),"0,48",6,,32,,0.53
-Madeira Carvalho vermelho (12% de umidade),"0,64",11,,66,,0.75
+Material,Massa Específica (g/cm³),Módulo de elasticidade(GPa),Coeficiente de Poisson,Coeficiente de expansão térmica(10^-6°C^-1),Calor específico (J/kg.K),Densidade (kg/m³),Absorção óptica (m⁻¹),Indução magnética (T),Condutividade elétrica (S/m)
+Liga de aço A36,"7,85",207,"0,3","11,7",486,7.85,2000,1.5,1.0
+Liga de aço 1020,"7,85",207,"0,3","11,7",486,7.85,2000,1.5,1.0
+Liga de aço 1040,"7,85",207,"0,3","11,3",486,7.85,2000,1.5,1.0
+Liga de aço 4140,"7,85",207,"0,3","12,3",500,7.85,2000,1.5,1.0
+Liga de aço 4340,"7,85",207,"0,3","12,3",502,7.85,2000,1.5,1.0
+Liga inoxidável 304,8,193,"0,3","17,2",460,8.00,1000,0.7,1.0
+Liga inoxidável 316,8,193,"0,3",16,460,8.00,1000,0.7,1.0
+Liga inoxidável 405,"7,8",200,"0,3","10,8",460,7.80,800,0.7,1.0
+Liga inoxidável 440A,"7,8",200,"0,3","10,2",544,7.80,800,0.7,1.0
+Liga inoxidável 17-7PH,"7,65",204,"0,3",11,544,7.65,800,0.7,1.0
+Ferros cinzentos Classe G1800,"7,3",82,"0,26","11,4",544,7.30,300,0.6,0.05
+Ferros cinzentos Classe G3000,"7,3",102,"0,26","11,4",544,7.30,300,0.6,0.05
+Ferros cinzentos Classe G4000,"7,3",124,"0,26","11,4",544,7.30,300,0.6,0.05
+Ferros nodulares Classe 60-40-18,"7,1",169,"0,29","11,2",544,7.10,300,0.6,0.05
+Ferros nodulares Classe 80-55-06,"7,1",168,"0,31","10,6",904,7.10,300,0.6,0.05
+Ferros nodulares Classe 120-90-02,"7,1",164,"0,28","23,6",875,7.10,300,0.6,0.05
+Liga 1100,"2,71",69,"0,33","22,9",896,2.71,100,0.1,37.0
+Liga 2024,"2,77",72,"0,33","23,6",960,2.77,50,0.1,27.0
+Liga 6061,"2,7",69,"0,33","23,4",963,2.70,50,0.1,27.0
+Liga 7075,"2,8",71,"0,33","21,5",385,2.80,50,0.1,27.0
+"Liga 356,0","2,69",72,"0,33",17,420,2.69,100,0.1,27.0
+C11000 (cobre eletrolítico tenaz),"8,89",115,"0,33","16,7",375,8.89,1000,0.1,58.0
+C17200 (berílio-cobre),"8,25",128,"0,3","19,9",380,8.25,1000,0.1,38.0
+C26000 (latão para cartuchos),"8,53",110,"0,35","20,5",380,8.53,200,0.1,15.0
+C36000 (latão de fácil usinagem),"8,5",97,"0,34","16,2",376,8.50,200,0.1,15.0
+"C71500 (cobre-níquel, 30%)","8,94",150,"0,34",18,1034,8.94,800,0.1,10.0
+C93200 (bronze para mancais),"8,93",100,"0,34",26,1050,8.93,600,0.1,10.0
+Liga AZ31B,"1,77",45,"0,35",26,538,1.77,30,1,5.0
+Liga AZ91D,"1,81",45,"0,35","8,6",460,1.81,30,1,5.0
+Comercialmente puro (ASTM classe 1),"4,51",103,"0,34","9,4",610,4.51,100,1,5.0
+"Liga Ti–5Al–2,5Sn","4,48",110,"0,34","8,6",128,4.50,40,1,1.0
+Liga Ti–6Al–4V,"4,43",114,"0,34","14,2",132,4.43,40,1,1.0
+Ouro (comercialmente puro),"19,32",77,"0,42","9,1",235,19.32,3000,1,45.0
+Platina (comercialmente pura),"21,45",171,"0,39","19,7",276,21.45,3000,1,10.0
+Prata (comercialmente pura),"10,49",74,"0,37","4,9",139,10.49,3000,1,63.0
+Molibdênio (comercialmente puro),"10,22",320,"0,32","6,9",138,10.28,1500,0.1,1.0
+Tântalo (comercialmente puro),"16,6",185,"0,35","4,4",456,16.65,2000,0.1,1.0
+Tungstênio (comercialmente puro),"19,3",400,"0,28","13,3",410,19.25,2000,0.1,1.0
+Níquel 200,"8,89",204,"0,31","12,8",427,8.90,1000,0.6,1.0
+Inconel 625,"8,44",207,"0,31","13,9",377,8.44,1000,0.6,1.0
+Monel 400,"8,8",180,"0,32","12,3",500,8.80,1000,0.6,1.0
+Liga Haynes 25,"9,13",236,,"1,6",500,9.13,1000,0.6,1.0
+Invar,"8,05",141,,"0,72",460,8.10,600,1,1.0
+Superinvar,"8,1",144,,"5,1",129,8.12,600,1,1.0
+Kovar,"8,36",207,,"29,3",135,8.36,800,1,1.0
+Chumbo químico,"11,34",14,"0,44","27,2",222,11.34,3000,1,5
+Chumbo antimonial (6%),"10,88",,,"23,8",150,11.20,3000,1,5
+Estanho (comercialmente puro),"7,17",44,"0,33",24,395,7.31,200,1,11
+Solda chumbo-estanho (60 Sn-40 Pb),"8,52",30,,23,285,8.40,200,1,12
+Zinco (comercialmente puro),"7,14",104,"0,25",23,775,7.14,100,1,0.02
+"Zircônio, classe 702 para reatores","6,51",99,"0,35","5,9",775,6.52,800,1,1
+"Óxido de alumínio 99,9% puro","3,98",380,"0,22","7,4",775,3.97,20,1,1
+Óxido de alumínio 96% puro,"3,72",303,"0,21","7,4",850,3.80,20,1,
+Óxido de alumínio 90% puro,"3,6",275,"0,22",7,520,3.60,20,1,1
+Concreto,"2,4",25,"0,2",10,350,2.40,10,1,1
+Diamante Natural,"3,51",700,"0,2","0,11",850,3.51,1,1,1
+Diamante Sintético,"3,36",800,"0,2","5,9",840,3.51,1,1,1
+Arseneto de gálio,"5,32",85,"0,3","3,3",975,5.32,100,1,1
+"Vidro, borossilicato (Pyrex)","2,23",70,"0,2",9,830,2.23,1,1,1
+"Vidro, sodo-cálcico","2,5",69,"0,23","6,5",830,2.50,1,1,1
+Vitrocerâmico (Pyroceram),"2,6",120,"0,25",2,740,2.60,1,1,1
+Grafita Extrudada,"1,71",11,,"2,2",700,1.75,100,1,1
+Grafita Conformada isostaticamente,"1,78",11,,"0,4",670,1.85,100,1,1
+"Sílica, fundida","2,2",73,"0,17","2,5",590,2.20,20,1,1
+Silício,"2,33",129,"0,28","4,6",760,2.33,100,1,1
+Carbeto de silício Prensa do ar quente,"3,3",207,"0,17","4,1",870,3.21,100,1,1
+Carbeto de silício Sinterizado,"3,2",207,"0,16","2,7",1100,3.10,100,1,1
+Nitreto de silício Prensa do ar quente,"3,3",304,"0,3","3,1",481,3.20,100,1,1
+Nitreto de silício Unido por reação,"2,7",304,"0,22","3,1",1050,2.70,100,1,1
+Nitreto de silício Sinterizado,"3,3",304,"0,28","9,6",1670,3.20,100,1,1
+"Zircônia, 3 mol% Y 2O3 , sinterizada",6,205,"0,31","9,6",1590,06.05,100,1,1
+Elastômeros Butadieno-acrilonitrila (nitrila),"0,98",0,,235,1170,1.00,10,1,1
+Elastômeros Estireno-butadieno (SBR),"0,94",0,,220,1050,1.00,10,1,1
+Elastômeros Silicone,"1,35",2,,270,1050,1.10,10,1,1
+Epóxi,"1,26",1,,81,1300,1.20,10,1,1
+Náilon,"1,14",2,"0,39",144,1300,1.14,10,1,1
+Fenólico,"1,28",1,,122,810,1.35,10,1,1
+Poli(tereftalato de butileno) (PBT),"1,34",2,,108,,1.31,10,1,1
+Policarbonato (PC),"1,2",2,"0,36",122,,1.20,10,1,1
+"Poliéster (termorrígido) 1,04–1,46","0,04",2,,100,,1.40,10,1,1
+Poli(éter-éter-cetona) (PEEK),"1,31",2,,72,,1.32,10,1,1
+Polietileno Baixa densidade (LDPE),"0,93",1,"0,38",180,,0.92,10,1,1
+Polietileno Alta densidade (HDPE),"0,96",0,"0,46",106,,0.95,10,1,1
+Polietileno Ultra-alto peso molecular (UHMWPE),"0,94",1,,234,,0.93,10,1,1
+Poli(tereftalato de etileno) (PET),"1,35",0,"0,33",117,,1.38,10,1,1
+Poli(metacrilato de metila) (PMMA),"1,19",1,0.41,90,,1.18,10,1,1
+Polipropileno (PP),"0,91",2,"0,4",146,,0.90,10,1,1
+Poliestireno (PS),"1,05",2,"0,33",90,,01.05,10,1,1
+Politetrafluoretileno (PTFE),"2,17",1,"0,46",126,,2.20,10,1,1
+"Poli(cloreto de vinila) (PVC) 1,","1,44",2,"0,38",90,,1.40,10,1,1
+Aramida (Kevlar 49),"1,44",131,,60,,1.44,10,1,1
+Carbono Módulo-padrão (precursor PAN),"1,78",230,,10,,1.75,10,1,1
+Carbono Módulo intermediário (precursor PAN),"1,78",285,,1,,1.80,10,1,1
+Carbono Módulo alto (precursor PAN),"1,81",400,,7,,1.90,10,1,1
+Carbono Módulo ultra-alto (precursor piche),"2,16",520,,15,,2.00,10,1,1
+Vidro-E,"2,58",72,"0,22",5,,2.58,10,1,1
+"Fibras de aramida-matriz epóxi(Vf 5 0,60)","1,4",76,"0,34",-4,,1.44,10,1,1
+"Fibras de carbono de módulo alto-matriz epóxi (V f 5 0,60)","1,7",5,"0,25",70,,1.60,10,1,1
+"Fibras de vidro-E-matriz epóxi(V f 5 0,60)","2,1",12,"0,19","-0,5",,2.00,10,1,1
+Madeira Pinheiro de Douglas (12% de umidade),"0,48",6,,32,,0.53,10,1,1
+Madeira Carvalho vermelho (12% de umidade),"0,64",11,,66,,0.75,10,1,1
